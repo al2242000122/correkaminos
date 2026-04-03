@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contacto — Correkaminos Logistica</title>
+  <meta name="description" content="Comunicate con Correkaminos Logistica. Cotizaciones, seguimiento de envios y atencion personalizada.">
+  <meta name="theme-color" content="#0a0f1a">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar scrolled" id="navbar">
+    <div class="container">
+      <a href="index.html" class="navbar-logo"><img src="logo.png" alt="Correkaminos Logistica"></a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="servicios.html">Servicios</a></li>
+        <li><a href="nosotros.html">Nosotros</a></li>
+        <li><a href="contacto.html" class="active">Contacto</a></li>
+        <li><a href="https://www.instagram.com/correkaminoslogistica/" target="_blank" class="nav-cta">Contactar</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Abrir menu"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+
+  <!-- PAGE HEADER -->
+  <div class="page-header">
+    <div class="container">
+      <span class="section-label">Hablemos</span>
+      <h1>Contacto</h1>
+      <p>Cotizaciones, seguimiento de envios o cualquier consulta. Estamos para ayudarte.</p>
+      <div class="breadcrumb"><a href="index.html">Inicio</a> / Contacto</div>
+    </div>
+  </div>
+
+  <!-- CONTACT -->
+  <section>
+    <div class="container">
+      <div class="contact-grid">
+
+        <!-- INFO -->
+        <div class="contact-info-card reveal">
+          <div class="contact-info-inner">
+            <h3>Informacion de contacto</h3>
+
+            <div class="contact-detail">
+              <div class="icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+              </div>
+              <div>
+                <h4>Instagram</h4>
+                <p><a href="https://www.instagram.com/correkaminoslogistica/" target="_blank" style="color:var(--teal-deeper);">@correkaminoslogistica</a></p>
+              </div>
+            </div>
+
+            <div class="contact-detail">
+              <div class="icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              </div>
+              <div>
+                <h4>Oficinas EUA</h4>
+                <p>Texas y California</p>
+              </div>
+            </div>
+
+            <div class="contact-detail">
+              <div class="icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              </div>
+              <div>
+                <h4>Oficinas Mexico</h4>
+                <p>Coahuila, Nuevo Leon y Baja California</p>
+              </div>
+            </div>
+
+            <div class="contact-detail">
+              <div class="icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              </div>
+              <div>
+                <h4>Atencion</h4>
+                <p>Lunes a Viernes</p>
+                <p>Seguimiento y rastreo 24/7</p>
+              </div>
+            </div>
+
+            <!-- Instagram CTA -->
+            <a href="https://www.instagram.com/correkaminoslogistica/" target="_blank" class="btn btn-primary" style="width:100%;justify-content:center;margin-top:1.5rem;">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+              Mensaje directo en Instagram
+            </a>
+          </div>
+        </div>
+
+        <!-- FORM -->
+        <div class="contact-form reveal reveal-delay-1">
+          <div class="contact-form-inner">
+            <h3>Solicita tu cotizacion</h3>
+            <form id="contactForm">
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="nombre">Nombre</label>
+                  <input type="text" id="nombre" placeholder="Tu nombre completo" required>
+                </div>
+                <div class="form-group">
+                  <label for="email">Correo electronico</label>
+                  <input type="email" id="email" placeholder="tu@correo.com">
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="asunto">Tipo de servicio</label>
+                <select id="asunto">
+                  <option value="">Selecciona un servicio</option>
+                  <option value="Paqueteria internacional">Paqueteria internacional</option>
+                  <option value="Carga comercial">Carga comercial</option>
+                  <option value="Rastreo de envio">Rastreo de envio</option>
+                  <option value="Comercializadora">Comercializadora / Compras</option>
+                  <option value="Logistica express">Logistica express</option>
+                  <option value="Informacion general">Informacion general</option>
+                  <option value="Otro">Otro</option>
+                </select>
+              </div>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="origen">Origen del envio</label>
+                  <input type="text" id="origen" placeholder="Ciudad / Estado / Pais">
+                </div>
+                <div class="form-group">
+                  <label for="destino">Destino del envio</label>
+                  <input type="text" id="destino" placeholder="Ciudad / Estado / Pais">
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="mensaje">Detalles de la mercancia</label>
+                <textarea id="mensaje" placeholder="Describe tu mercancia: tipo de producto, dimensiones aproximadas, peso estimado, cantidad..." rows="5"></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;">
+                Enviar solicitud
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+              </button>
+              <p style="text-align:center;margin-top:.75rem;font-size:.78rem;color:var(--slate-400);font-weight:300;">
+                Te responderemos en menos de 24 horas habiles.
+              </p>
+            </form>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section style="background:var(--slate-50)">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-label">Preguntas frecuentes</span>
+        <h2>Resolvemos tus dudas</h2>
+        <p>Las consultas mas comunes sobre nuestros servicios logisticos.</p>
+      </div>
+      <div class="about-grid" style="grid-template-columns: 1fr 1fr; gap: 1.5rem;">
+        <div class="about-card reveal">
+          <div class="about-card-inner">
+            <h4 style="color:var(--slate-950);margin-bottom:.5rem;">Que tipo de mercancia manejan?</h4>
+            <p>Desde paquetes pequenos hasta contenedores completos. Manejamos paqueteria, carga comercial, productos de consumo y mercancia general sin restricciones de peso o dimensiones.</p>
+          </div>
+        </div>
+        <div class="about-card reveal reveal-delay-1">
+          <div class="about-card-inner">
+            <h4 style="color:var(--slate-950);margin-bottom:.5rem;">Cuanto tiempo tarda un envio?</h4>
+            <p>Depende de la ruta y tipo de servicio. Nuestras rutas directas entre oficinas permiten tiempos competitivos. Contactanos para un estimado segun tu caso especifico.</p>
+          </div>
+        </div>
+        <div class="about-card reveal">
+          <div class="about-card-inner">
+            <h4 style="color:var(--slate-950);margin-bottom:.5rem;">Como funciona el rastreo?</h4>
+            <p>Cada envio tiene un responsable asignado que te mantiene informado con actualizaciones constantes. Puedes consultar el estatus de tu mercancia en cualquier momento.</p>
+          </div>
+        </div>
+        <div class="about-card reveal reveal-delay-1">
+          <div class="about-card-inner">
+            <h4 style="color:var(--slate-950);margin-bottom:.5rem;">Tienen oficinas fisicas?</h4>
+            <p>Si. Tenemos oficinas en Texas, California (EUA) y en Coahuila, Nuevo Leon y Baja California (Mexico). Coordinacion directa en ambos paises.</p>
+          </div>
+        </div>
+        <div class="about-card reveal">
+          <div class="about-card-inner">
+            <h4 style="color:var(--slate-950);margin-bottom:.5rem;">Pueden comprar productos por mi?</h4>
+            <p>Si. Nuestro servicio de comercializadora se encarga de la adquisicion de productos en EUA y gestionamos todo el proceso de envio hasta tu destino en Mexico.</p>
+          </div>
+        </div>
+        <div class="about-card reveal reveal-delay-1">
+          <div class="about-card-inner">
+            <h4 style="color:var(--slate-950);margin-bottom:.5rem;">Como se calcula el costo?</h4>
+            <p>El costo depende del tipo de mercancia, dimensiones, peso y ruta. Contactanos con los detalles de tu envio y te damos una cotizacion personalizada sin compromiso.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section">
+    <div class="container reveal">
+      <span class="section-label" style="background:rgba(15,181,186,.12);color:var(--teal);">Respuesta rapida</span>
+      <h2>Tu mercancia no espera.<br>Nosotros tampoco.</h2>
+      <p>Respuesta en menos de 24 horas habiles.</p>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="logo.png" alt="Correkaminos Logistica">
+          <p>Comercializadora y logistica internacional. Oficinas en EUA y Mexico con seguimiento y rastreo personalizado.</p>
+        </div>
+        <div>
+          <h4>Navegacion</h4>
+          <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="servicios.html">Servicios</a></li>
+            <li><a href="nosotros.html">Nosotros</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Servicios</h4>
+          <ul>
+            <li><a href="servicios.html">Paqueteria internacional</a></li>
+            <li><a href="servicios.html">Carga comercial</a></li>
+            <li><a href="servicios.html">Rastreo personalizado</a></li>
+            <li><a href="servicios.html">Comercializadora</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Contacto</h4>
+          <ul>
+            <li><a href="https://www.instagram.com/correkaminoslogistica/" target="_blank">@correkaminoslogistica</a></li>
+            <li>Oficinas en TX, CA (EUA)</li>
+            <li>Oficinas en COAH, N.L., B.C. (MX)</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 Correkaminos Logistica. Todos los derechos reservados.</span>
+        <div class="footer-social">
+          <a href="https://www.instagram.com/correkaminoslogistica/" target="_blank" aria-label="Instagram">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => { navbar.classList.toggle('scrolled', true); });
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('navLinks');
+    hamburger.addEventListener('click', () => navLinks.classList.toggle('open'));
+    navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => navLinks.classList.remove('open')));
+    const revealElements = document.querySelectorAll('.reveal');
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('active'); });
+    }, { threshold: 0.15 });
+    revealElements.forEach(el => revealObserver.observe(el));
+
+    // Form submission handler
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const nombre = document.getElementById('nombre').value;
+      const email = document.getElementById('email').value;
+      const asunto = document.getElementById('asunto').value;
+      const origen = document.getElementById('origen').value;
+      const destino = document.getElementById('destino').value;
+      const mensaje = document.getElementById('mensaje').value;
+
+      let text = `Hola Correkaminos, me gustaria solicitar una cotizacion.\n\n`;
+      text += `*Nombre:* ${nombre}\n`;
+      if (email) text += `*Correo:* ${email}\n`;
+      if (asunto) text += `*Servicio:* ${asunto}\n`;
+      if (origen) text += `*Origen:* ${origen}\n`;
+      if (destino) text += `*Destino:* ${destino}\n`;
+      if (mensaje) text += `\n*Detalles:*\n${mensaje}`;
+
+      // PENDIENTE: Configurar numero de WhatsApp o email de Correkaminos
+      // Por ahora redirige a Instagram
+      window.open(`https://www.instagram.com/correkaminoslogistica/`, '_blank');
+    });
+  </script>
+
+</body>
+</html>
