@@ -46,6 +46,7 @@ html {
   scroll-behavior: smooth;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow-x: clip; /* un elemento desbordado no debe encoger la pagina en movil */
 }
 
 body {
@@ -187,6 +188,7 @@ h4 {
 .hero {
   position: relative;
   height: 300vh;
+  padding: 0; /* sin el padding generico de section: desplaza al sticky y deja franjas blancas */
 }
 .hero-sticky {
   position: sticky;
@@ -461,12 +463,29 @@ section { padding: 6rem 0; }
 .service-card:hover .card-link svg {
   transform: translateX(4px);
 }
+.services-note {
+  text-align: center;
+  margin-top: 2.5rem;
+  color: var(--slate-500);
+  font-weight: 300;
+}
+.services-note a { color: var(--teal-deeper); font-weight: 600; }
+.services-note a:hover { text-decoration: underline; }
 
 /* ─── PROCESS / ABOUT CARDS ─── */
 .about-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 2rem;
+}
+/* Variantes de columnas — en clases (no inline) para poder
+   colapsarlas a 1 columna en movil desde el media query */
+.grid-2 { grid-template-columns: 1fr 1fr; }
+.grid-3 { grid-template-columns: repeat(3, 1fr); }
+.grid-split {
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
 }
 /* Double-Bezel for about-cards */
 .about-card {
@@ -578,7 +597,12 @@ section { padding: 6rem 0; }
   height: 20px;
 }
 .contact-detail h4 { margin-bottom: .2rem; color: var(--slate-950); }
-.contact-detail p { color: var(--slate-500); font-size: .92rem; font-weight: 300; }
+.contact-detail p {
+  color: var(--slate-500);
+  font-size: .92rem;
+  font-weight: 300;
+  overflow-wrap: anywhere; /* correos largos no deben desbordar en movil */
+}
 
 /* Double-bezel form */
 .contact-form {
@@ -830,13 +854,30 @@ body::after {
   .section-header { margin-bottom: 3rem; }
   .footer-grid { grid-template-columns: 1fr; gap: 2rem; }
   .form-row { grid-template-columns: 1fr; }
-  /* En movil el video 16:9 horizontal no puede llenar una pantalla
-     vertical sin recortarse (~74% del cuadro se pierde con cover).
-     Se muestra completo como banda inferior: texto arriba, video abajo. */
-  .hero { height: 250vh; }
+  .grid-2, .grid-3, .grid-split { grid-template-columns: 1fr; }
+  .grid-split { gap: 2.5rem; }
+  .page-header { text-align: center; padding: 8rem 0 3.5rem; }
+  .page-header p { margin-inline: auto; }
+}
+
+@media (max-width: 480px) {
+  .stats-grid { grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+  .about-grid { grid-template-columns: 1fr; }
+}
+
+/* ── HERO ADAPTADO: telefonos y tablets en vertical ──
+   El video del hero es 16:9 horizontal: en una pantalla vertical con
+   object-fit cover se recorta ~74% del cuadro. En estos dispositivos la
+   pagina se adapta por completo: sin scrub ligado al scroll (el JS
+   reproduce el video en loop) y el cuadro completo como banda 16:9.
+   En PC se conserva la animacion cinematica original. */
+@media (max-width: 768px), (orientation: portrait) and (max-width: 1024px) {
+  .hero { height: auto; }
   .hero-sticky {
-    height: 100vh;
-    height: 100dvh; /* viewport real, sin zona oculta tras la barra de URL */
+    position: relative;
+    height: auto;
+    min-height: 100vh;
+    min-height: 100dvh; /* viewport real, sin zona oculta tras la barra de URL */
     flex-direction: column;
     background: var(--slate-950);
   }
@@ -861,19 +902,11 @@ body::after {
     justify-content: center;
     align-items: center;
     text-align: center;
-    margin-left: auto;
-    margin-right: auto;
-    padding-top: 100px; /* libra el navbar fijo */
+    max-width: 720px;
+    margin: 0 auto;
+    padding-top: 110px; /* libra el navbar fijo */
+    padding-bottom: 2rem;
   }
   .hero-content p { margin-inline: auto; }
-  .hero-scroll-hint {
-    bottom: calc(56.25vw + 1.25rem); /* justo encima de la banda de video */
-  }
-  .page-header { text-align: center; padding: 8rem 0 3.5rem; }
-  .page-header p { margin-inline: auto; }
-}
-
-@media (max-width: 480px) {
-  .stats-grid { grid-template-columns: 1fr 1fr; gap: 1.5rem; }
-  .about-grid { grid-template-columns: 1fr; }
+  .hero-scroll-hint { display: none; }
 }
