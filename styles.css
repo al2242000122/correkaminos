@@ -830,13 +830,45 @@ body::after {
   .section-header { margin-bottom: 3rem; }
   .footer-grid { grid-template-columns: 1fr; gap: 2rem; }
   .form-row { grid-template-columns: 1fr; }
+  /* En movil el video 16:9 horizontal no puede llenar una pantalla
+     vertical sin recortarse (~74% del cuadro se pierde con cover).
+     Se muestra completo como banda inferior: texto arriba, video abajo. */
   .hero { height: 250vh; }
+  .hero-sticky {
+    height: 100vh;
+    height: 100dvh; /* viewport real, sin zona oculta tras la barra de URL */
+    flex-direction: column;
+    background: var(--slate-950);
+  }
+  .hero-video-wrap {
+    position: relative;
+    inset: auto;
+    order: 2;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    flex: 0 0 auto;
+  }
+  .hero-video-wrap video,
+  .hero-video-wrap .hero-fallback {
+    object-fit: contain;
+  }
+  .hero-overlay { display: none; }
   .hero-content {
+    order: 1;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     text-align: center;
     margin-left: auto;
     margin-right: auto;
+    padding-top: 100px; /* libra el navbar fijo */
   }
   .hero-content p { margin-inline: auto; }
+  .hero-scroll-hint {
+    bottom: calc(56.25vw + 1.25rem); /* justo encima de la banda de video */
+  }
   .page-header { text-align: center; padding: 8rem 0 3.5rem; }
   .page-header p { margin-inline: auto; }
 }
