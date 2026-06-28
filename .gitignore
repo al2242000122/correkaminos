@@ -1,0 +1,7 @@
+# Tooling de skills (no es contenido del sitio)
+.agents/
+skills-lock.json
+
+# Sistema
+Thumbs.db
+.DS_Store

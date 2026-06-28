@@ -54,7 +54,7 @@ body {
   color: var(--slate-700);
   background: var(--warm-white);
   line-height: 1.6;
-  overflow-x: hidden;
+  overflow-x: clip; /* clip (no hidden): hidden coerce overflow-y a auto y rompe el position:sticky del hero */
 }
 
 img { max-width: 100%; height: auto; display: block; }
