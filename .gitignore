@@ -5,3 +5,7 @@ skills-lock.json
 # Sistema
 Thumbs.db
 .DS_Store
+
+# Paquetes locales
+dist/
+__pycache__/

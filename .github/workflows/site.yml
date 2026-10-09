@@ -1,0 +1,28 @@
+name: Verificar y empaquetar sitio
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - name: Verificar JavaScript
+        run: node --check app.js
+      - name: Validar y empaquetar archivos públicos
+        run: python3 scripts/package_site.py
+      - name: Guardar paquete para Hostinger
+        uses: actions/upload-artifact@v4
+        with:
+          name: correkaminos-hostinger
+          path: dist/correkaminos-hostinger.zip
+          if-no-files-found: error
+          retention-days: 14
